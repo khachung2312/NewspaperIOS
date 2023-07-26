@@ -6,24 +6,19 @@
 //
 
 import UIKit
+import WebKit
 
 class ReadNewsViewController: UIViewController {
 
+    @IBOutlet weak var webview: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        webview.loadHTMLString("X<h1 style='color: red'>Xin chào </h1>", baseURL: nil)
         // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

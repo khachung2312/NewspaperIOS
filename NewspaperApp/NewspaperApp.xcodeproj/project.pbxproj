@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C096C9782A716F02003837BA /* ReadNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C096C9772A716F02003837BA /* ReadNewsViewController.swift */; };
+		C0FD47B42A717A9200F568F4 /* ReadNews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0FD47B32A717A9200F568F4 /* ReadNews.storyboard */; };
+		C0FD47B92A7194D700F568F4 /* ReadNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FD47B72A7194D700F568F4 /* ReadNewsTableViewCell.swift */; };
+		C0FD47BA2A7194D700F568F4 /* ReadNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0FD47B82A7194D700F568F4 /* ReadNewsTableViewCell.xib */; };
 		D3D805252A716B870017152A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D805242A716B870017152A /* AppDelegate.swift */; };
 		D3D805272A716B870017152A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D805262A716B870017152A /* SceneDelegate.swift */; };
 		D3D805292A716B870017152A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D805282A716B870017152A /* ViewController.swift */; };
@@ -38,6 +41,9 @@
 
 /* Begin PBXFileReference section */
 		C096C9772A716F02003837BA /* ReadNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadNewsViewController.swift; sourceTree = "<group>"; };
+		C0FD47B32A717A9200F568F4 /* ReadNews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReadNews.storyboard; sourceTree = "<group>"; };
+		C0FD47B72A7194D700F568F4 /* ReadNewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadNewsTableViewCell.swift; sourceTree = "<group>"; };
+		C0FD47B82A7194D700F568F4 /* ReadNewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReadNewsTableViewCell.xib; sourceTree = "<group>"; };
 		D3D805212A716B870017152A /* NewspaperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewspaperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D805242A716B870017152A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3D805262A716B870017152A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +115,9 @@
 				D3D8052F2A716B890017152A /* LaunchScreen.storyboard */,
 				D3D805322A716B890017152A /* Info.plist */,
 				C096C9772A716F02003837BA /* ReadNewsViewController.swift */,
+				C0FD47B32A717A9200F568F4 /* ReadNews.storyboard */,
+				C0FD47B72A7194D700F568F4 /* ReadNewsTableViewCell.swift */,
+				C0FD47B82A7194D700F568F4 /* ReadNewsTableViewCell.xib */,
 			);
 			path = NewspaperApp;
 			sourceTree = "<group>";
@@ -237,6 +246,8 @@
 				D3D805312A716B890017152A /* LaunchScreen.storyboard in Resources */,
 				D3D8052E2A716B890017152A /* Assets.xcassets in Resources */,
 				D3D8052C2A716B870017152A /* Main.storyboard in Resources */,
+				C0FD47B42A717A9200F568F4 /* ReadNews.storyboard in Resources */,
+				C0FD47BA2A7194D700F568F4 /* ReadNewsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +275,7 @@
 				D3D805292A716B870017152A /* ViewController.swift in Sources */,
 				D3D805252A716B870017152A /* AppDelegate.swift in Sources */,
 				D3D805272A716B870017152A /* SceneDelegate.swift in Sources */,
+				C0FD47B92A7194D700F568F4 /* ReadNewsTableViewCell.swift in Sources */,
 				C096C9782A716F02003837BA /* ReadNewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
