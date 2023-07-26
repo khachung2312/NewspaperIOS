@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8034775D2A716DB3001C1472 /* CommentsNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8034775C2A716DB3001C1472 /* CommentsNewsViewController.swift */; };
 		D3D805252A716B870017152A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D805242A716B870017152A /* AppDelegate.swift */; };
 		D3D805272A716B870017152A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D805262A716B870017152A /* SceneDelegate.swift */; };
 		D3D805292A716B870017152A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D805282A716B870017152A /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8034775C2A716DB3001C1472 /* CommentsNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsNewsViewController.swift; sourceTree = "<group>"; };
 		D3D805212A716B870017152A /* NewspaperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewspaperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D805242A716B870017152A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3D805262A716B870017152A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				D3D8052D2A716B890017152A /* Assets.xcassets */,
 				D3D8052F2A716B890017152A /* LaunchScreen.storyboard */,
 				D3D805322A716B890017152A /* Info.plist */,
+				8034775C2A716DB3001C1472 /* CommentsNewsViewController.swift */,
 			);
 			path = NewspaperApp;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			files = (
 				D3D805292A716B870017152A /* ViewController.swift in Sources */,
 				D3D805252A716B870017152A /* AppDelegate.swift in Sources */,
+				8034775D2A716DB3001C1472 /* CommentsNewsViewController.swift in Sources */,
 				D3D805272A716B870017152A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
