@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		8034775D2A716DB3001C1472 /* CommentsNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8034775C2A716DB3001C1472 /* CommentsNewsViewController.swift */; };
+		8034775F2A71749E001C1472 /* StoryboardCommentsNews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8034775E2A71749E001C1472 /* StoryboardCommentsNews.storyboard */; };
+		803477662A717AB4001C1472 /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803477642A717AB4001C1472 /* CommentsTableViewCell.swift */; };
+		803477672A717AB4001C1472 /* CommentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 803477652A717AB4001C1472 /* CommentsTableViewCell.xib */; };
+		803477692A718B7C001C1472 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803477682A718B7C001C1472 /* CommentModel.swift */; };
+		8034776E2A718E17001C1472 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8034776D2A718E17001C1472 /* Alamofire */; };
 		D3D805252A716B870017152A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D805242A716B870017152A /* AppDelegate.swift */; };
 		D3D805272A716B870017152A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D805262A716B870017152A /* SceneDelegate.swift */; };
 		D3D805292A716B870017152A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D805282A716B870017152A /* ViewController.swift */; };
@@ -38,6 +43,10 @@
 
 /* Begin PBXFileReference section */
 		8034775C2A716DB3001C1472 /* CommentsNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsNewsViewController.swift; sourceTree = "<group>"; };
+		8034775E2A71749E001C1472 /* StoryboardCommentsNews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoryboardCommentsNews.storyboard; sourceTree = "<group>"; };
+		803477642A717AB4001C1472 /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
+		803477652A717AB4001C1472 /* CommentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsTableViewCell.xib; sourceTree = "<group>"; };
+		803477682A718B7C001C1472 /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 		D3D805212A716B870017152A /* NewspaperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewspaperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D805242A716B870017152A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3D805262A716B870017152A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8034776E2A718E17001C1472 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +118,10 @@
 				D3D8052D2A716B890017152A /* Assets.xcassets */,
 				D3D8052F2A716B890017152A /* LaunchScreen.storyboard */,
 				D3D805322A716B890017152A /* Info.plist */,
+				8034775E2A71749E001C1472 /* StoryboardCommentsNews.storyboard */,
+				803477642A717AB4001C1472 /* CommentsTableViewCell.swift */,
+				803477652A717AB4001C1472 /* CommentsTableViewCell.xib */,
+				803477682A718B7C001C1472 /* CommentModel.swift */,
 				8034775C2A716DB3001C1472 /* CommentsNewsViewController.swift */,
 			);
 			path = NewspaperApp;
@@ -146,6 +160,9 @@
 			dependencies = (
 			);
 			name = NewspaperApp;
+			packageProductDependencies = (
+				8034776D2A718E17001C1472 /* Alamofire */,
+			);
 			productName = NewspaperApp;
 			productReference = D3D805212A716B870017152A /* NewspaperApp.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +235,9 @@
 				Base,
 			);
 			mainGroup = D3D805182A716B870017152A;
+			packageReferences = (
+				8034776C2A718E17001C1472 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = D3D805222A716B870017152A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,9 +254,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8034775F2A71749E001C1472 /* StoryboardCommentsNews.storyboard in Resources */,
 				D3D805312A716B890017152A /* LaunchScreen.storyboard in Resources */,
 				D3D8052E2A716B890017152A /* Assets.xcassets in Resources */,
 				D3D8052C2A716B870017152A /* Main.storyboard in Resources */,
+				803477672A717AB4001C1472 /* CommentsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +284,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3D805292A716B870017152A /* ViewController.swift in Sources */,
+				803477692A718B7C001C1472 /* CommentModel.swift in Sources */,
+				803477662A717AB4001C1472 /* CommentsTableViewCell.swift in Sources */,
 				D3D805252A716B870017152A /* AppDelegate.swift in Sources */,
 				8034775D2A716DB3001C1472 /* CommentsNewsViewController.swift in Sources */,
 				D3D805272A716B870017152A /* SceneDelegate.swift in Sources */,
@@ -445,7 +469,7 @@
 				INFOPLIST_FILE = NewspaperApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = StoryboardCommentsNews;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -472,7 +496,7 @@
 				INFOPLIST_FILE = NewspaperApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = StoryboardCommentsNews;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -600,6 +624,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8034776C2A718E17001C1472 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8034776D2A718E17001C1472 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8034776C2A718E17001C1472 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D3D805192A716B870017152A /* Project object */;
 }
