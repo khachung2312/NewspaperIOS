@@ -12,18 +12,20 @@ class ShareNewsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
+    
+    
+    @IBAction func btnShare(_ sender: Any) {
+//        let image = Bundle.main.url(forResource: "image", withExtension: "png")!
+       
+        let URL = "https://tuoitre.vn/gan-800-ti-dong-tai-tro-phi-loi-nhuan-cho-cac-nha-khoa-hoc-viet-nam-20230726152812158.htm"
+  
+        let text = "Hello"
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let activityVC = UIActivityViewController(activityItems: [URL, text], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = sender as? UIView
+        self.present(activityVC, animated: true, completion: nil)
     }
-    */
-
+        
 }
