@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D33BD0752A716E6700EBD72E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33BD0742A716E6700EBD72E /* LoginViewController.swift */; };
+		D33BD0772A71715D00EBD72E /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33BD0762A71715D00EBD72E /* Account.storyboard */; };
+		D33BD07A2A7172CF00EBD72E /* ExtensionBackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33BD0792A7172CF00EBD72E /* ExtensionBackgroundColor.swift */; };
+		D33BD07E2A71924300EBD72E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33BD07D2A71924300EBD72E /* SignUpViewController.swift */; };
 		D3D805252A716B870017152A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D805242A716B870017152A /* AppDelegate.swift */; };
 		D3D805272A716B870017152A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D805262A716B870017152A /* SceneDelegate.swift */; };
 		D3D805292A716B870017152A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D805282A716B870017152A /* ViewController.swift */; };
@@ -36,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D33BD0742A716E6700EBD72E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D33BD0762A71715D00EBD72E /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		D33BD0792A7172CF00EBD72E /* ExtensionBackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionBackgroundColor.swift; sourceTree = "<group>"; };
+		D33BD07D2A71924300EBD72E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D3D805212A716B870017152A /* NewspaperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewspaperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D805242A716B870017152A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3D805262A716B870017152A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +84,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D33BD0732A716E1F00EBD72E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D33BD0742A716E6700EBD72E /* LoginViewController.swift */,
+				D33BD0762A71715D00EBD72E /* Account.storyboard */,
+				D33BD07D2A71924300EBD72E /* SignUpViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D33BD0782A7172BB00EBD72E /* ReuseCode */ = {
+			isa = PBXGroup;
+			children = (
+				D33BD0792A7172CF00EBD72E /* ExtensionBackgroundColor.swift */,
+			);
+			path = ReuseCode;
+			sourceTree = "<group>";
+		};
 		D3D805182A716B870017152A = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +125,8 @@
 		D3D805232A716B870017152A /* NewspaperApp */ = {
 			isa = PBXGroup;
 			children = (
+				D33BD0782A7172BB00EBD72E /* ReuseCode */,
+				D33BD0732A716E1F00EBD72E /* ViewController */,
 				D3D805242A716B870017152A /* AppDelegate.swift */,
 				D3D805262A716B870017152A /* SceneDelegate.swift */,
 				D3D805282A716B870017152A /* ViewController.swift */,
@@ -234,6 +262,7 @@
 				D3D805312A716B890017152A /* LaunchScreen.storyboard in Resources */,
 				D3D8052E2A716B890017152A /* Assets.xcassets in Resources */,
 				D3D8052C2A716B870017152A /* Main.storyboard in Resources */,
+				D33BD0772A71715D00EBD72E /* Account.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +287,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D33BD07E2A71924300EBD72E /* SignUpViewController.swift in Sources */,
+				D33BD0752A716E6700EBD72E /* LoginViewController.swift in Sources */,
 				D3D805292A716B870017152A /* ViewController.swift in Sources */,
+				D33BD07A2A7172CF00EBD72E /* ExtensionBackgroundColor.swift in Sources */,
 				D3D805252A716B870017152A /* AppDelegate.swift in Sources */,
 				D3D805272A716B870017152A /* SceneDelegate.swift in Sources */,
 			);
@@ -441,7 +473,7 @@
 				INFOPLIST_FILE = NewspaperApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Account;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,7 +500,7 @@
 				INFOPLIST_FILE = NewspaperApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Account;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
