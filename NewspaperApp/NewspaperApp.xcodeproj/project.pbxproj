@@ -11,6 +11,8 @@
 		D33BD0772A71715D00EBD72E /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33BD0762A71715D00EBD72E /* Account.storyboard */; };
 		D33BD07A2A7172CF00EBD72E /* ExtensionBackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33BD0792A7172CF00EBD72E /* ExtensionBackgroundColor.swift */; };
 		D33BD07E2A71924300EBD72E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33BD07D2A71924300EBD72E /* SignUpViewController.swift */; };
+		D358D4CA2A742A7600838031 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D358D4C92A742A7600838031 /* ForgetPasswordViewController.swift */; };
+		D358D4CC2A742DD600838031 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D358D4CB2A742DD600838031 /* ChangePasswordViewController.swift */; };
 		D3D805252A716B870017152A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D805242A716B870017152A /* AppDelegate.swift */; };
 		D3D805272A716B870017152A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D805262A716B870017152A /* SceneDelegate.swift */; };
 		D3D805292A716B870017152A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D805282A716B870017152A /* ViewController.swift */; };
@@ -44,6 +46,8 @@
 		D33BD0762A71715D00EBD72E /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		D33BD0792A7172CF00EBD72E /* ExtensionBackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionBackgroundColor.swift; sourceTree = "<group>"; };
 		D33BD07D2A71924300EBD72E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		D358D4C92A742A7600838031 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
+		D358D4CB2A742DD600838031 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		D3D805212A716B870017152A /* NewspaperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewspaperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D805242A716B870017152A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3D805262A716B870017152A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 				D33BD0742A716E6700EBD72E /* LoginViewController.swift */,
 				D33BD0762A71715D00EBD72E /* Account.storyboard */,
 				D33BD07D2A71924300EBD72E /* SignUpViewController.swift */,
+				D358D4C92A742A7600838031 /* ForgetPasswordViewController.swift */,
+				D358D4CB2A742DD600838031 /* ChangePasswordViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -288,9 +294,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D33BD07E2A71924300EBD72E /* SignUpViewController.swift in Sources */,
+				D358D4CC2A742DD600838031 /* ChangePasswordViewController.swift in Sources */,
 				D33BD0752A716E6700EBD72E /* LoginViewController.swift in Sources */,
 				D3D805292A716B870017152A /* ViewController.swift in Sources */,
 				D33BD07A2A7172CF00EBD72E /* ExtensionBackgroundColor.swift in Sources */,
+				D358D4CA2A742A7600838031 /* ForgetPasswordViewController.swift in Sources */,
 				D3D805252A716B870017152A /* AppDelegate.swift in Sources */,
 				D3D805272A716B870017152A /* SceneDelegate.swift in Sources */,
 			);
