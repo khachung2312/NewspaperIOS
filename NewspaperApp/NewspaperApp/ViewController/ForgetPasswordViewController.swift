@@ -23,11 +23,7 @@ class ForgetPasswordViewController: UIViewController {
         btnConfirmFP.backgroundColor = UIColor(red: 32/255, green: 82/255, blue: 84/255, alpha: 1.0)
         btnConfirmFP.layer.cornerRadius = 10
         
-        let lblEmailInvalid = UILabel(frame: CGRect(x:(txtEmail.frame.minX + 7), y: (txtEmail.frame.minY + 25), width: txtEmail.frame.width, height: txtEmail.frame.height))
-        lblEmailInvalid.text = "\(checkEmail)"
-        lblEmailInvalid.textColor = .red
-        lblEmailInvalid.font =  UIFont.systemFont(ofSize: 10)
-        self.ForgetPasswordView.addSubview(lblEmailInvalid)
+        self.ForgetPasswordView.addInvalidLabel(text: "\(checkEmail)", for: txtEmail)
     }
     
 }

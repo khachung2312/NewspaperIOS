@@ -30,30 +30,11 @@ class SignUpViewController: UIViewController {
         var checkEmail = "Email không hợp lệ"
         var checkPassword = "Mật khẩu không hợp lệ"
         var checkPassword2 = "Mật khẩu nhập lại không khớp"
-        
-        let lblFullNameInvalid = UILabel(frame: CGRect(x: (txtFullName.frame.minX + 7), y: (txtFullName.frame.minY + 25), width: txtFullName.frame.width, height: txtFullName.frame.height))
-        lblFullNameInvalid.text = "\(checkFullName)"
-        lblFullNameInvalid.textColor = .red
-        lblFullNameInvalid.font = UIFont.systemFont(ofSize: 10)
-        self.SignUpView.addSubview(lblFullNameInvalid)
-        
-        let lblEmailInvalid = UILabel(frame: CGRect(x: (txtEmail.frame.minX + 7), y: (txtEmail.frame.minY + 25), width: txtEmail.frame.width, height: txtEmail.frame.height))
-        lblEmailInvalid.text = "\(checkEmail)"
-        lblEmailInvalid.textColor = .red
-        lblEmailInvalid.font = UIFont.systemFont(ofSize: 10)
-        self.SignUpView.addSubview(lblEmailInvalid)
-        
-        let lblPasswordInvalid = UILabel(frame: CGRect(x: (txtPassword.frame.minX + 7), y: (txtPassword.frame.minY + 25), width: txtPassword.frame.width, height: txtPassword.frame.height))
-        lblPasswordInvalid.text = "\(checkPassword)"
-        lblPasswordInvalid.textColor = .red
-        lblPasswordInvalid.font = UIFont.systemFont(ofSize: 10)
-        self.SignUpView.addSubview(lblPasswordInvalid)
-        
-        let lblPassword2Invalid = UILabel(frame: CGRect(x: (txtPassword2.frame.minX + 7), y: (txtPassword2.frame.minY + 25), width: txtPassword2.frame.width, height: txtPassword2.frame.height))
-        lblPassword2Invalid.text = "\(checkPassword2)"
-        lblPassword2Invalid.textColor = .red
-        lblPassword2Invalid.font = UIFont.systemFont(ofSize: 10)
-        self.SignUpView.addSubview(lblPassword2Invalid)
+    
+        self.SignUpView.addInvalidLabel(text: "\(checkFullName)", for: txtFullName)
+        self.SignUpView.addInvalidLabel(text: "\(checkEmail)", for: txtEmail)
+        self.SignUpView.addInvalidLabel(text: "\(checkPassword)", for: txtPassword)
+        self.SignUpView.addInvalidLabel(text: "\(checkPassword2)", for: txtPassword2)
         
     }
     

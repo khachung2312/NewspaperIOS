@@ -28,27 +28,9 @@ class ChangePasswordViewController: UIViewController {
         btnConfirmChangPassword.backgroundColor = UIColor(red: 32/255, green: 82/255, blue: 84/255, alpha: 1.0)
         btnConfirmChangPassword.layer.cornerRadius  = 10
         
-        let lblOldPasswordInvalid = UILabel(frame: CGRect(x:(txtOldPassword.frame.minX + 7), y: (txtOldPassword.frame.minY + 25), width: txtOldPassword.frame.width, height: txtOldPassword.frame.height))
-        
-        lblOldPasswordInvalid.text = "\(checkNewPassword)"
-        lblOldPasswordInvalid.textColor = .red
-        lblOldPasswordInvalid.font =  UIFont.systemFont(ofSize: 10)
-        self.ChangePasswordView.addSubview(lblOldPasswordInvalid)
-        
-        let lblNewPasswordInvalid = UILabel(frame: CGRect(x:(txtNewPassword.frame.minX + 7), y: (txtNewPassword.frame.minY + 25), width: txtNewPassword.frame.width, height: txtNewPassword.frame.height))
-        
-        lblNewPasswordInvalid.text = "\(checkOldPassword)"
-        lblNewPasswordInvalid.textColor = .red
-        lblNewPasswordInvalid.font =  UIFont.systemFont(ofSize: 10)
-        self.ChangePasswordView.addSubview(lblNewPasswordInvalid)
-        
-        
-        let lblNewPassword2Invalid = UILabel(frame: CGRect(x:(txtNewPassword2.frame.minX + 7), y: (txtNewPassword2.frame.minY + 25), width: txtNewPassword2.frame.width, height: txtNewPassword2.frame.height))
-        
-        lblNewPassword2Invalid.text = "\(checkNewPassword2)"
-        lblNewPassword2Invalid.textColor = .red
-        lblNewPassword2Invalid.font =  UIFont.systemFont(ofSize: 10)
-        self.ChangePasswordView.addSubview(lblNewPassword2Invalid)
+        self.ChangePasswordView.addInvalidLabel(text: "\(checkNewPassword)", for: txtOldPassword)
+        self.ChangePasswordView.addInvalidLabel(text: "\(checkNewPassword)", for: txtNewPassword)
+        self.ChangePasswordView.addInvalidLabel(text: "\(checkNewPassword2)", for: txtNewPassword2)
         
     }
 
