@@ -84,35 +84,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         return true
     }
-    
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-            if textField == txtPassword {
-                if let currentText = textField.text as NSString? {
-                    let updatedText = currentText.replacingCharacters(in: range, with: string).trimmingCharacters(in: .whitespacesAndNewlines)
-                    
-                    let secureText = String(repeating: "*", count: updatedText.count)
-                    
-                    textField.text = secureText
-                    
-                    return false
-                }
-            }
-            return true
-    }
-    
-    
+
     func callAPILogin(email: String, password: String) {
         let apiHandler = APIHandler()
         apiHandler.loginAccount(email: email, password: password) { (success, account) in
             if success {
                 UserDefaults.standard.setValue(account, forKey: "account")
-//                print(email)
-//                print(password)
-            } else {
-                self.showError("Tài khoản hoặc mật khẩu không chính xác")
                 print(email)
                 print(password)
+            } else {
+                self.showError("Tài khoản hoặc mật khẩu không chính xác")
             }
         }
     }
@@ -132,5 +113,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             return
         }
         callAPILogin(email: email, password: password)
+        showSuccess()
     }
 }

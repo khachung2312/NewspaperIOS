@@ -37,8 +37,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    func showError() {
-        let alert = UIAlertController(title: "Lỗi", message: "Đăng ký tài khoản thất bại", preferredStyle: .alert)
+    func showError(_ message: String) {
+        let alert = UIAlertController(title: "Lỗi", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
@@ -129,22 +129,30 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-            if textField == txtPassword  || textField == txtPassword2 {
-                if let currentText = textField.text as NSString? {
-                    let updatedText = currentText.replacingCharacters(in: range, with: string).trimmingCharacters(in: .whitespacesAndNewlines)
-                    
-                    let secureText = String(repeating: "*", count: updatedText.count)
-                    
-                    textField.text = secureText
-                    
-                    return false
-                }
+    func callAPISignUp(fullName: String, email: String, password: String){
+        let fullName = txtFullName.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let email = txtEmail.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let password = txtPassword.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        let apiHandler = APIHandler()
+        apiHandler.registerAccount(fullName: fullName, email: email, password: password) { success in
+            if success {
+                self.showSuccess()
+            } else {
+                self.showError("Đăng ký tài khoản thất bại.")
             }
-            return true
+        }
     }
     
     @IBAction func btnRegisterConfirm(_ sender: UIButton) {
+        guard let fullName = txtFullName.text?.trimmingCharacters(in: .whitespacesAndNewlines), !fullName.isEmpty,
+              let email = txtEmail.text?.trimmingCharacters(in: .whitespacesAndNewlines), !email.isEmpty,
+              let password = txtPassword.text?.trimmingCharacters(in: .whitespacesAndNewlines), !password.isEmpty,
+              let password2 = txtPassword2.text?.trimmingCharacters(in: .whitespacesAndNewlines), !password2.isEmpty else {
+            showError("Vui lòng điền đầy đủ thông tin.")
+            return
+        }
+        callAPISignUp(fullName: fullName, email: email, password: password)
         showSuccess()
     }
 }

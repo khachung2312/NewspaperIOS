@@ -30,7 +30,7 @@
                                             <constraint firstAttribute="height" constant="34" id="Hu7-VM-4XW"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEY-rd-lnN">
                                         <rect key="frame" x="96" y="63" width="201" height="0.0"/>
@@ -221,7 +221,7 @@
                                             <constraint firstAttribute="height" constant="34" id="EoA-B3-jfG"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập lại mật khẩu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rkE-26-ZR3">
                                         <rect key="frame" x="50" y="294.00000000000006" width="293" height="34"/>
@@ -229,7 +229,7 @@
                                             <constraint firstAttribute="height" constant="34" id="O5T-zC-DcC"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l7S-yh-Yez">
                                         <rect key="frame" x="96" y="63" width="201" height="0.0"/>
