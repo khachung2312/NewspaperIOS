@@ -28,9 +28,9 @@ class ChangePasswordViewController: UIViewController {
         btnConfirmChangPassword.backgroundColor = UIColor(red: 32/255, green: 82/255, blue: 84/255, alpha: 1.0)
         btnConfirmChangPassword.layer.cornerRadius  = 10
         
-        self.ChangePasswordView.addInvalidLabel(text: "\(checkNewPassword)", for: txtOldPassword)
-        self.ChangePasswordView.addInvalidLabel(text: "\(checkNewPassword)", for: txtNewPassword)
-        self.ChangePasswordView.addInvalidLabel(text: "\(checkNewPassword2)", for: txtNewPassword2)
+//        self.ChangePasswordView.addInvalidLabel(text: "\(checkNewPassword)", for: txtOldPassword)
+//        self.ChangePasswordView.addInvalidLabel(text: "\(checkNewPassword)", for: txtNewPassword)
+//        self.ChangePasswordView.addInvalidLabel(text: "\(checkNewPassword2)", for: txtNewPassword2)
         
     }
 

@@ -47,7 +47,7 @@
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="btnGoToForgetPasswordScreen:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Tqn-FA-aC0"/>
+                                            <action selector="btnToForgotPasswordScreen:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="JiW-v7-XDi"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zm9-74-wCF">
@@ -58,6 +58,9 @@
                                         <state key="normal" title="Đăng Nhập">
                                             <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnLoginConfirm:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="JAq-PP-hk2"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ĐĂNG NHẬP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0id-Ii-jbg">
                                         <rect key="frame" x="128.66666666666669" y="15" width="135.66666666666669" height="40"/>
@@ -120,7 +123,7 @@
                                             <color key="titleColor" red="0.12549019607843137" green="0.32156862745098036" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
-                                            <action selector="btnGoToSignUpScreen:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ufw-wx-VI0"/>
+                                            <action selector="btnToRegisterScreen:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0fK-wn-0LY"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bạn chưa có tài khoản ?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQt-u1-yDL">
@@ -270,7 +273,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="eye.fill" catalog="system"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qe-73-4ns">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qe-73-4ns" userLabel="Btn Sign Up">
                                         <rect key="frame" x="90" y="366" width="213" height="34.666666666666742"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.12549019610000001" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -279,8 +282,11 @@
                                         <state key="normal" title="Đăng Ký">
                                             <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnRegisterConfirm:" destination="OM8-Ie-eA4" eventType="touchUpInside" id="zaH-by-6IX"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Blu-7Q-gSk">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Blu-7Q-gSk" userLabel="Btn Login">
                                         <rect key="frame" x="244" y="444" width="99" height="39"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -291,7 +297,6 @@
                                         <connections>
                                             <action selector="btnGoToForgetPassword:" destination="q0C-17-0Rt" eventType="touchUpInside" id="WLR-7e-EMX"/>
                                             <action selector="btnGoToLoginScreen:" destination="OM8-Ie-eA4" eventType="touchUpInside" id="l6w-vW-Daj"/>
-                                            <action selector="btnGoToSignUpScreen:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qXK-Pk-x5D"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bạn đã có tài khoản ?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dg-tW-9Nw">
@@ -352,8 +357,8 @@
                     <navigationItem key="navigationItem" id="xtC-sh-GxG"/>
                     <connections>
                         <outlet property="SignUpView" destination="wYb-ks-XtH" id="dWi-Bc-gbg"/>
-                        <outlet property="btnLogin" destination="5qe-73-4ns" id="OxN-Em-D0D"/>
-                        <outlet property="btnSignUp" destination="Blu-7Q-gSk" id="jnA-a6-DbM"/>
+                        <outlet property="btnLogin" destination="Blu-7Q-gSk" id="w6w-sn-N7P"/>
+                        <outlet property="btnSignUp" destination="5qe-73-4ns" id="uy3-L8-EOq"/>
                         <outlet property="txtEmail" destination="CZd-rX-YeI" id="kCv-fj-ZRN"/>
                         <outlet property="txtFullName" destination="qTZ-0G-ZK6" id="6il-Sg-v2U"/>
                         <outlet property="txtPassword" destination="H43-9y-VFb" id="C0i-Xf-jrv"/>
@@ -523,7 +528,7 @@
                                         <buttonConfiguration key="configuration" style="plain" image="eye.circle.fill" catalog="system"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RN0-D1-ron">
-                                        <rect key="frame" x="298" y="190" width="45" height="35"/>
+                                        <rect key="frame" x="298" y="190.00000000000006" width="45" height="35"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="eye.circle.fill" catalog="system"/>
@@ -541,7 +546,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3q-Ph-Kmc">
-                                        <rect key="frame" x="298" y="267" width="45" height="35"/>
+                                        <rect key="frame" x="298" y="267.00000000000006" width="45" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="45" id="1Pe-Eq-FjL"/>
                                         </constraints>
