@@ -7,9 +7,9 @@
 
 import UIKit
 import FacebookLogin
-import FBSDKCoreKit
+import FacebookCore
 
-class LoginViewController: UIViewController, UITextFieldDelegate, LoginButtonDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var btnLoginFb: UIButton!
@@ -30,46 +30,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate, LoginButtonDel
         self.txtEmail.delegate = self
         self.txtPassword.delegate = self
         
-        let loginButton = FBLoginButton()
-                loginButton.center = view.center
-                view.addSubview(loginButton)
+        Settings.shared.appID = "585645196981146"
+        Settings.shared.clientToken = "6acfe649c9d21115f04143dfb8fb72c7"
         
-        if let token = AccessToken.current,
-                !token.isExpired {
-                // User is logged in, do work such as go to next view controller.
-            }
-        loginButton.permissions = ["public_profile", "email"]
-        Settings.shared.appID = "665992965421456"
-        Settings.shared.clientToken = "b1a9c06deb2ff732ab42c792793a0a8a"
-        loginButton.delegate = self
-
     }
-    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
-            if let error = error {
-                print("Facebook login error: \(error.localizedDescription)")
-                return
-            }
-
-            if let token = AccessToken.current, !token.isExpired {
-                print("Logged in with Facebook: \(token.userID)")
-
-                // Fetch user data using Graph API
-                let request = GraphRequest(graphPath: "me", parameters: ["fields": "id, name, email"], tokenString: token.tokenString, version: nil, httpMethod: .get)
-                request.start { (connection, result, error) in
-                    if let error = error {
-                        print("Graph API request error: \(error.localizedDescription)")
-                        return
-                    }
-                    if let userData = result as? [String: Any] {
-                        print("User Data from Facebook: \(userData)")
-                    }
-                }
-            }
-        }
-    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
-           print("Logged out from Facebook")
-       }
-    
     
     func showError(_ message: String) {
         let alert = UIAlertController(title: "Lỗi", message: message, preferredStyle: .alert)
@@ -160,7 +124,33 @@ class LoginViewController: UIViewController, UITextFieldDelegate, LoginButtonDel
         callAPILogin(email: email, password: password)
         showSuccess()
     }
-    @IBAction func btnLoginWithFb(_ sender: UIButton) {
+    func fetchFacebookUserProfile() {
+        if let token = AccessToken.current, !token.isExpired {
+            let request = GraphRequest(graphPath: "me", parameters: ["fields": "id, name, email"]) // Thêm các trường thông tin bạn muốn lấy
+            request.start { (connection, result, error) in
+                if let error = error {
+                    print("Error fetching Facebook profile: \(error.localizedDescription)")
+                } else if let result = result as? [String: Any] {
+                    print("Facebook profile: \(result)")
+                    if let email = result["email"] as? String {
+                        // Tiếp tục xử lý thông tin email, có thể gọi API để đăng nhập hoặc đăng ký
+                    }
+                }
+            }
+        }
     }
-
+    @IBAction func btnLoginWithFb(_ sender: UIButton) {
+        let loginManager = LoginManager()
+        loginManager.logIn(permissions: ["public_profile", "email"], from: self) { (result, error) in
+            if let error = error {
+                print("Login with Facebook failed: \(error.localizedDescription)")
+            } else if let result = result, !result.isCancelled {
+                self.showSuccess()
+                self.fetchFacebookUserProfile()
+            } else {
+                print("Login with Facebook cancelled")
+            }
+        }
+    }
+    
 }

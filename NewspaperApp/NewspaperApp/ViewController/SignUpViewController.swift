@@ -154,6 +154,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             showError("Vui lòng điền đầy đủ thông tin.")
             return
         }
+        
         callAPISignUp(fullName: fullName, email: email, password: password)
     }
 }

@@ -150,6 +150,7 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate {
                   showError("Vui lòng điền đầy đủ thông tin")
                     return
               }
+        
         callAPIChangePassword(email: email, oldPassword: oldPassword, newPassword: newPassword)
     }
 }

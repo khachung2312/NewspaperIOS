@@ -85,6 +85,7 @@ class ForgetPasswordViewController: UIViewController, UITextFieldDelegate {
             showError("Vui lòng điền đầy đủ thông tin")
             return
         }
+        
         callAPIForgotPassword(email: email)
         
         let changePasswordScreen = self.storyboard?.instantiateViewController(withIdentifier: "ChangePasswordVCIdentifier") as! ChangePasswordViewController
