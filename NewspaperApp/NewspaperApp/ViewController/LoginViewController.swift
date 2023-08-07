@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import FacebookCore
+import FacebookLogin
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var btnLoginFb: UIButton!
     @IBOutlet weak var LoginView: UIView!
     @IBOutlet weak var btnSignUp: UIButton!
     @IBOutlet weak var btnLogin: UIButton!
@@ -25,6 +28,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         self.txtEmail.delegate = self
         self.txtPassword.delegate = self
+        
     }
     
     func showError(_ message: String) {
@@ -84,7 +88,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         return true
     }
-
+    
     func callAPILogin(email: String, password: String) {
         let apiHandler = APIHandler()
         apiHandler.loginAccount(email: email, password: password) { (success, account) in
@@ -97,6 +101,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
+    
     
     @IBAction func btnToForgotPasswordScreen(_ sender: UIButton) {
         let forgetPasswordScreen = self.storyboard?.instantiateViewController(withIdentifier: "ForgetPasswordVCIdentifier") as! ForgetPasswordViewController
@@ -114,5 +119,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         callAPILogin(email: email, password: password)
         showSuccess()
+    }
+    @IBAction func btnLoginWithFb(_ sender: UIButton) {
+        let loginButton = FBLoginButton()
+        if let token = AccessToken.current,
+                !token.isExpired {
+                // User is logged in, do work such as go to next view controller.
+            }
+        loginButton.permissions = ["public_profile", "email"]
     }
 }

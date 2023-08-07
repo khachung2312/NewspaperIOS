@@ -17,6 +17,8 @@
 		D368B6102A7974AD004A2B52 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D368B60F2A7974AD004A2B52 /* Alamofire */; };
 		D368B6132A7974F0004A2B52 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368B6122A7974F0004A2B52 /* APIHandler.swift */; };
 		D368B6162A7979F9004A2B52 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368B6152A7979F9004A2B52 /* AccountModel.swift */; };
+		D368B6552A7F92CB004A2B52 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = D368B6542A7F92CB004A2B52 /* FacebookCore */; };
+		D368B6572A7F92CB004A2B52 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = D368B6562A7F92CB004A2B52 /* FacebookLogin */; };
 		D3D805252A716B870017152A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D805242A716B870017152A /* AppDelegate.swift */; };
 		D3D805272A716B870017152A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D805262A716B870017152A /* SceneDelegate.swift */; };
 		D3D805292A716B870017152A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D805282A716B870017152A /* ViewController.swift */; };
@@ -76,6 +78,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D368B6102A7974AD004A2B52 /* Alamofire in Frameworks */,
+				D368B6552A7F92CB004A2B52 /* FacebookCore in Frameworks */,
+				D368B6572A7F92CB004A2B52 /* FacebookLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +210,8 @@
 			name = NewspaperApp;
 			packageProductDependencies = (
 				D368B60F2A7974AD004A2B52 /* Alamofire */,
+				D368B6542A7F92CB004A2B52 /* FacebookCore */,
+				D368B6562A7F92CB004A2B52 /* FacebookLogin */,
 			);
 			productName = NewspaperApp;
 			productReference = D3D805212A716B870017152A /* NewspaperApp.app */;
@@ -281,6 +287,7 @@
 			mainGroup = D3D805182A716B870017152A;
 			packageReferences = (
 				D368B60E2A7974AD004A2B52 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D368B6532A7F92CB004A2B52 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = D3D805222A716B870017152A /* Products */;
 			projectDirPath = "";
@@ -682,6 +689,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		D368B6532A7F92CB004A2B52 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -689,6 +704,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D368B60E2A7974AD004A2B52 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		D368B6542A7F92CB004A2B52 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D368B6532A7F92CB004A2B52 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		D368B6562A7F92CB004A2B52 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D368B6532A7F92CB004A2B52 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

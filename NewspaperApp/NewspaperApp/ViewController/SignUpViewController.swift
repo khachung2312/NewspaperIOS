@@ -102,7 +102,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
     
     func isFullNameValid() -> Bool {
-        if txtFullName.text!.count < 2 {
+        let fullNameRegex = "^[A-Za-zÀ-ÖØ-öø-ÿ'-]+( [A-Za-zÀ-ÖØ-öø-ÿ'-]+)*$"
+        let fullNamePredicate = NSPredicate(format: "SELF MATCHES %@", fullNameRegex)
+        if !fullNamePredicate.evaluate(with: txtFullName.text) {
             return false
         }
         return true
@@ -153,7 +155,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             return
         }
         callAPISignUp(fullName: fullName, email: email, password: password)
-        showSuccess()
     }
 }
 
