@@ -20,21 +20,21 @@
 				</dict>
 			</array>
 		</dict>
-        <key>CFBundleURLTypes</key>
-        <array>
-          <dict>
-          <key>CFBundleURLSchemes</key>
-          <array>
-            <string>fb665992965421456</string>
-          </array>
-          </dict>
-        </array>
-        <key>FacebookAppID</key>
-        <string>665992965421456</string>
-        <key>FacebookClientToken</key>
-        <string>b1a9c06deb2ff732ab42c792793a0a8a</string>
-        <key>FacebookDisplayName</key>
-        <string>NewspaperApp</string>
+		<key>CFBundleURLTypes</key>
+		<array>
+			<dict>
+				<key>CFBundleURLSchemes</key>
+				<array>
+					<string>fb665992965421456</string>
+				</array>
+			</dict>
+		</array>
+		<key>FacebookAppID</key>
+		<string>665992965421456</string>
+		<key>FacebookClientToken</key>
+		<string>b1a9c06deb2ff732ab42c792793a0a8a</string>
+		<key>FacebookDisplayName</key>
+		<string>NewspaperApp</string>
 	</dict>
 </dict>
 </plist>

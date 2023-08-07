@@ -6,8 +6,8 @@
 //
 
 import UIKit
-import FacebookCore
 import FacebookLogin
+import FBSDKCoreKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
@@ -29,6 +29,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.txtEmail.delegate = self
         self.txtPassword.delegate = self
         
+        let loginButton = FBLoginButton()
+                loginButton.center = view.center
+                view.addSubview(loginButton)
+        
+        if let token = AccessToken.current,
+                !token.isExpired {
+                // User is logged in, do work such as go to next view controller.
+            }
+        loginButton.permissions = ["public_profile", "email"]
+        Settings.shared.appID = "665992965421456"
+        Settings.shared.clientToken = "b1a9c06deb2ff732ab42c792793a0a8a"
+
     }
     
     func showError(_ message: String) {
@@ -121,11 +133,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         showSuccess()
     }
     @IBAction func btnLoginWithFb(_ sender: UIButton) {
-        let loginButton = FBLoginButton()
-        if let token = AccessToken.current,
-                !token.isExpired {
-                // User is logged in, do work such as go to next view controller.
-            }
-        loginButton.permissions = ["public_profile", "email"]
+//        let loginButton = FBLoginButton()
+//        if let token = AccessToken.current,
+//                !token.isExpired {
+//                // User is logged in, do work such as go to next view controller.
+//            }
+//        loginButton.permissions = ["public_profile", "email"]
     }
 }
