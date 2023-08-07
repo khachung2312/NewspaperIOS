@@ -26,7 +26,7 @@ class ForgetPasswordViewController: UIViewController, UITextFieldDelegate {
     
     func showError(_ message: String){
         let alert = UIAlertController(title: "Lỗi", message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Thành Công", style: .default, handler: nil)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
     }
@@ -69,9 +69,25 @@ class ForgetPasswordViewController: UIViewController, UITextFieldDelegate {
         checkAndUpdateButtonState()
     }
     
+    func callAPIForgotPassword(email: String){
+        let apiHandler = APIHandler()
+        apiHandler.forgotPassword(email: email) { success in
+            if success {
+                self.showSuccess()
+            } else {
+                self.showError("Quên mật khẩu thất bại")
+            }
+        }
+    }
+    
     @IBAction func btnFPConfirm(_ sender: UIButton) {
+        guard let email = txtEmail.text?.trimmingCharacters(in: .whitespacesAndNewlines), !email.isEmpty else{
+            showError("Vui lòng điền đầy đủ thông tin")
+            return
+        }
+        callAPIForgotPassword(email: email)
+        
         let changePasswordScreen = self.storyboard?.instantiateViewController(withIdentifier: "ChangePasswordVCIdentifier") as! ChangePasswordViewController
         self.navigationController?.pushViewController(changePasswordScreen, animated: true)
-        showSuccess()
     }
 }

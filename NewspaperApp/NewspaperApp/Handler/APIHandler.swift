@@ -12,7 +12,8 @@ class APIHandler{
     
     let BASE_REGISTER_ACCOUNT = "http://:3000/accounts/register"
     let BASE_LOGIN_ACCOUNT = "http://:3000/accounts/login"
-    let BASE_CHANGPASSWORD_ACCOUNT = "http://:3000/accounts/changePassword"
+    let BASE_CHANGEPASSWORD_ACCOUNT = "http://:3000/accounts/changePassword"
+    let BASE_FORGETPASSWORD_ACCOUNT = "http://:3000/accounts/forgotPassword/"
     
     func registerAccount(fullName: String, email: String, password: String, completion: @escaping(Bool) -> ()){
         let parameters: [String: Any] = [
@@ -55,7 +56,7 @@ class APIHandler{
             "newPassword": newPassword
         ]
         
-        AF.request("\(BASE_CHANGPASSWORD_ACCOUNT)", method: .put, parameters: parameters, encoding: JSONEncoding.default).response { response in
+        AF.request("\(BASE_CHANGEPASSWORD_ACCOUNT)", method: .put, parameters: parameters, encoding: JSONEncoding.default).response { response in
             if response.error == nil {
                 completion(true)
             } else {
@@ -63,6 +64,20 @@ class APIHandler{
             }
         }
     }
+    func forgotPassword(email: String, completion: @escaping(Bool) -> ()) {
+        let parameters: [String: Any] = [
+            "email": email
+        ]
+        
+        AF.request("\(BASE_FORGETPASSWORD_ACCOUNT)", method: .post, parameters: parameters, encoding: JSONEncoding.default).response { response in
+            if response.error == nil {
+                completion(true)
+            } else {
+                completion(false)
+            }
+        }
+    }
+
     
     func loginWithFacebook(accessToken: String, completion: @escaping(Bool, [String: Any]?) -> ()) {
         let parameters: [String: Any] = [

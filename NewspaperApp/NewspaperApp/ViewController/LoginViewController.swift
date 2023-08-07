@@ -9,7 +9,8 @@ import UIKit
 import FacebookLogin
 import FBSDKCoreKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate, LoginButtonDelegate {
+    
     
     @IBOutlet weak var btnLoginFb: UIButton!
     @IBOutlet weak var LoginView: UIView!
@@ -40,8 +41,35 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         loginButton.permissions = ["public_profile", "email"]
         Settings.shared.appID = "665992965421456"
         Settings.shared.clientToken = "b1a9c06deb2ff732ab42c792793a0a8a"
+        loginButton.delegate = self
 
     }
+    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+            if let error = error {
+                print("Facebook login error: \(error.localizedDescription)")
+                return
+            }
+
+            if let token = AccessToken.current, !token.isExpired {
+                print("Logged in with Facebook: \(token.userID)")
+
+                // Fetch user data using Graph API
+                let request = GraphRequest(graphPath: "me", parameters: ["fields": "id, name, email"], tokenString: token.tokenString, version: nil, httpMethod: .get)
+                request.start { (connection, result, error) in
+                    if let error = error {
+                        print("Graph API request error: \(error.localizedDescription)")
+                        return
+                    }
+                    if let userData = result as? [String: Any] {
+                        print("User Data from Facebook: \(userData)")
+                    }
+                }
+            }
+        }
+    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
+           print("Logged out from Facebook")
+       }
+    
     
     func showError(_ message: String) {
         let alert = UIAlertController(title: "Lỗi", message: message, preferredStyle: .alert)
@@ -133,11 +161,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         showSuccess()
     }
     @IBAction func btnLoginWithFb(_ sender: UIButton) {
-//        let loginButton = FBLoginButton()
-//        if let token = AccessToken.current,
-//                !token.isExpired {
-//                // User is logged in, do work such as go to next view controller.
-//            }
-//        loginButton.permissions = ["public_profile", "email"]
     }
+
 }
