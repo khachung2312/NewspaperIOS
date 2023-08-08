@@ -98,6 +98,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         apiHandler.loginAccount(email: email, password: password) { (success, account) in
             if success {
                 UserDefaults.standard.setValue(account, forKey: "account")
+                self.showSuccess()
                 print(email)
                 print(password)
             } else {
@@ -122,7 +123,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             return
         }
         callAPILogin(email: email, password: password)
-        showSuccess()
     }
     func fetchFacebookUserProfile() {
         if let token = AccessToken.current, !token.isExpired {

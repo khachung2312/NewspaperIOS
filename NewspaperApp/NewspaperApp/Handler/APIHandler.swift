@@ -77,27 +77,6 @@ class APIHandler{
             }
         }
     }
-
-    
-    func loginWithFacebook(accessToken: String, completion: @escaping(Bool, [String: Any]?) -> ()) {
-        let parameters: [String: Any] = [
-            "access_token": accessToken
-        ]
-        
-        AF.request("http://your-api-url-here/accounts/loginWithFacebook", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
-            switch response.result {
-            case .success(let json):
-                if let accountJson = json as? [String: Any] {
-                    completion(true, accountJson)
-                } else {
-                    completion(false, nil)
-                }
-            case .failure(let error):
-                print("Đăng nhập bằng Facebook thất bại: \(error)")
-                completion(false, nil)
-            }
-        }
-    }
 }
 
 
